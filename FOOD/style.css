@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    cursor: pointer;
+    background-color: black;
+    height: 70px;
+}
+
+
+.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    color: antiquewhite;
+    font-family: 'Pacifico', cursive;
+}
+
+.logo img{
+    width: 20%;
+    border-radius: 50px;
+    padding: 10px;
+
+}
+
+.navlist li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.navlist li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navlist li a:hover{
+    color: grey;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7)url('https://cdn.wallpapersafari.com/22/37/nru3wc.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    overflow: hidden;
+}
+
+.firstsection{
+    height: 100vh;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+.firsthalf{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+.secondhalf{
+    width: 50%;
+    padding-left: 50px;
+}
+
+.secondhalf img{
+    border: 4px solid white;
+    border-radius: 10000px;
+    height: 450px;
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+.big{
+   font-size: 50px;
+}
+
+.small{
+    font-family: 'Allan', cursive;
+}
+
+.text{
+    font-family: 'Allan', cursive;
+}
+.secondsection{
+    height: 100vh
+}
+
+.aboutbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+.FIRSTHALF{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+.SECONDHALF{
+    width: 50%;
+    padding-left: 50px;
+}
+
+.SECONDHALF img{
+    border: 4px solid white;
+    border-radius: 10000px;
+    height: 450px;
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+.subheading{
+    text-align:center;
+    color:green;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.menu .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0, 0, 0, .2);
+    box-shadow: gray;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu .box-container .box img{
+    height:17rem;
+    margin:1rem 0;
+}
+
+.menu .box-container .box h3{
+    color:black;
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .stars{
+    padding:1rem;
+}
+
+.menu .box-container .box .mo{
+    padding-bottom: 20px;
+    color: green;
+    font-size: 20px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(27, 27, 56);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-style: italic;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.btn-dark{
+    color: white;
+    background-color: rgb(27, 27, 56);
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+.order{
+    background-color: rgb(184, 181, 178);
+    height: 156vh;
+}
+
+.form{
+    max-width: 380px;
+    margin: 42px auto;
+}
+
+.form-input{
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    margin: 30px 0;
+    padding: 5px 3px; 
+}
+
+.footer{
+    color:azure;
+    text-align: center;
+    background-color: rgb(17, 13, 13);
+    height: 200px;
+    }
+
+.footer .one{
+   padding: 30px;
+
+}
+
+
+.margin{
+margin: 10px;
+}
+
+.burger{
+   position: absolute;
+   cursor: pointer;
+   right: 5%;
+   top: 15px;
+   display: none;
+}
+
+.line{
+    width: 33px;
+    background-color: #fff;
+    height: 5px;
+    margin: 3px 3px;
+}
+
+@media only screen and (max-width: 1112px){
+    .navlist{
+        flex-direction: column;
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .h-nav-resp{
+        height: 72px;
+    }
+
+    .v-class-resp{
+        opacity: 0;
+    }
+
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+    
