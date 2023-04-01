@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    /* width: 100vw; */
+    right: 0;
 }
 
 .navbar{
@@ -16,6 +18,7 @@
 
 .navlist{
     display: flex;
+    color: white;
     align-items: center;
 }
 
@@ -50,14 +53,19 @@
 }
 
 .navlist li a:hover{
-    color: grey;
+    color: orangered;
+}
+
+nav .navlist .close{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
 }
 
 .background{
-    background: rgba(0, 0, 0, 0.7)url('https://i.fbcd.co/products/original/2f40bb531c400c95e40953351a533a937bd2dde8f271affd6f62086035428bbb.jpg');
+    background: rgba(0, 0, 0, 0.7)url('https://cdn.wallpapersafari.com/22/37/nru3wc.jpg');
     background-size: cover;
     background-blend-mode: darken;
-    overflow: hidden;
 }
 
 .firstsection{
@@ -80,19 +88,17 @@
     justify-content: center;
     flex-direction: column;
 }
- 
-.secondhalf{
-    width: 50%;
-    padding-left: 50px;
-}
+
 
 .secondhalf img{
     border: 4px solid white;
-    border-radius: 10000px;
     height: 450px;
     width: 450px;
-    display: block;
-    margin: auto;
+    border-radius: 500px;
+}
+
+.secondhalf{
+     padding-left: 20px;
 }
 
 .big{
@@ -106,9 +112,6 @@
 .text{
     font-family: 'Allan', cursive;
 }
-.secondsection{
-    height: 100vh
-}
 
 .aboutbox{
     display: flex;
@@ -118,27 +121,6 @@
     max-width: 50%;
     margin: auto;
     height: 100%;
-}
-
-.FIRSTHALF{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
- 
-.SECONDHALF{
-    width: 50%;
-    padding-left: 50px;
-}
-
-.SECONDHALF img{
-    border: 4px solid white;
-    border-radius: 10000px;
-    height: 450px;
-    width: 450px;
-    display: block;
-    margin: auto;
 }
 
 .subheading{
@@ -157,9 +139,10 @@
 }
 
 .menu .box-container{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 1.5rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu .box-container .box{
@@ -168,13 +151,15 @@
     border-radius: .5rem;
     border:.1rem solid rgba(0, 0, 0, .2);
     box-shadow: gray;
-    position: relative;
-    overflow: hidden;
+    width: 45vw;
+    margin: 20px;
     text-align: center;
 }
 
 .menu .box-container .box img{
     height:17rem;
+    width: 45vw;
+    height: 30vw;
     margin:1rem 0;
     
 }
@@ -201,34 +186,43 @@
     border-radius: 5px;
     font-style: italic;
     text-decoration: none;
+    text-align: center;
     padding: 10px;
-}
+} 
 
 .btn-dark{
-    color: white;
-    background-color: rgb(27, 27, 56);
-    border: 1px solid black;
-    padding: 10px;
-
+    text-align: center;
+    padding-top: 40px;
 }
+
 
 .order{
     background-color: rgb(184, 181, 178);
+    margin-right: 0;
+    height: 100vh;
     
 }
 
 .form{
-    max-width: 380px;
-    margin: 42px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3px 2px;
+    padding-left: 220px;
+    padding-top: 50px;
 }
 
-.form-input{
-    width: 100%;
-    font-size: 20px;
-    border: 2px solid grey;
-    border-radius: 6px;
-    margin: 30px 0;
-    padding: 5px 3px; 
+.input{
+    line-height: 30px;
+    margin: 5px;
+}
+
+.input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 3px;
 }
 
 .footer{
@@ -263,36 +257,379 @@ margin: 10px;
     margin: 3px 3px;
 }
 
-@media only screen and (max-width: 1112px){
-    .navlist{
-        flex-direction: column;
+@media screen and (max-width:1115px)
+{
+
+    body{
+        width: 100vw;
+    }
+    .box-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        max-width: 70%;
+        margin: auto;
+        height: 100%;
+
+}
+
+    .form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3px 2px;
+        padding-left: 130px;
+        padding-top: 50px;
+        overflow: hidden;
+
+}
+.secondhalf img {
+    border: 4px solid white;
+    height: 250px;
+    width: 250px;
+    border-radius: 300px;
+}
+
+.closeme{
+    display: none;
+}
+}
+
+@media screen and (max-width: 1115px) and (min-width: 836px)
+{
+    .form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3px 2px;
+        padding-left: 60px;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+    
+    .order{
+        height: auto;
     }
 
-    .navbar{
+    .btn-dark{
+        text-align: center;
+        padding: 40px;
+    }
+
+    .closeme{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 837px) and (min-width: 829px)
+{
+    .form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3px 2px;
+        padding-left: 30px;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    .closeme{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 828px) and (min-width:688px )
+{
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
+        padding-left: 30px;
+        padding-top: 30px;
+
+    }
+
+    .order{
+        height: 80vh;
+    }
+
+    .closeme{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 688px) and (min-width: 412px)
+{
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+
+    .order{
+        height: 100vh;
+    }
+
+    .secondhalf img {
+        border: 4px solid white;
+        height: 240px;
+        width: 240px;
+        border-radius: 350px;
+    }
+
+    .firsthalf{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        padding-left: 20px;
+    }
+
+    .secondhalf{
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .navlist{
+        display: none;
     }
 
     .burger{
         display: block;
     }
 
-    .h-nav-resp{
-        height: 72px;
-    }
-
-    .v-class-resp{
-        opacity: 0;
-    }
-
     .box-main{
+        display: flex;
+        justify-content: center;
+        align-content: center;
         flex-direction: column-reverse;
-        max-width: 100%;
+        color: white;
+        margin: auto;
+        width: 50%;
+    }
+    
+    nav .navlist {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .navlist .closeme{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 30px;
+    }
+
+    nav .navbar {
+        display: block;
+    }
+
+    nav .navlist li a:hover {
+        background: none;
+        color: orangered;
+        font-size: 1.6rem;
     }
 }
 
+@media screen and (max-width: 411px) and (min-width: 376px)
+{
+   
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-top: 25px;
+    }
 
+    .order{
+        height: 100vh;
+    }
 
+    .secondhalf img {
+        border: 4px solid white;
+        height: 240px;
+        width: 240px;
+        border-radius: 350px;
+    }
 
+    .firsthalf{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        padding-left: 20px;
+    }
 
+    .secondhalf{
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
 
+    .navlist{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .box-main{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column-reverse;
+        color: white;
+        margin: auto;
+        width: 50%;
+    }
     
+    nav .navlist {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .navlist .closeme{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .navbar {
+        display: block;
+    }
+
+    nav .navlist li a:hover {
+        background: none;
+        color: orangered;
+        font-size: 1.6rem;
+    }
+
+
+.closeme{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px)
+{
+   
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-top: 25px;
+    }
+
+    .order{
+        height: 150vh;
+    }
+
+    .secondhalf img {
+        border: 4px solid white;
+        height: 240px;
+        width: 240px;
+        border-radius: 350px;
+    }
+
+    .firsthalf{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        padding-left: 20px;
+    }
+
+    .secondhalf{
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .navlist{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .box-main{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column-reverse;
+        color: white;
+        margin: auto;
+        width: 50%;
+    }
+
+    .firstsection{
+        height: auto;
+    }
+    
+
+nav .navlist {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .navlist .closeme{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .navbar {
+        display: block;
+    }
+
+    nav .navlist li a:hover {
+        background: none;
+        color: orangered;
+        font-size: 1.6rem;
+    }
+
+    .firstsection{
+        height: 150vh;
+    }
+}
