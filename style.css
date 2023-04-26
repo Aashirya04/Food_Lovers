@@ -44,7 +44,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 20px;
+    padding: 5px 25px;
 }
 
 .navlist li a{
@@ -61,6 +61,22 @@ nav .navlist .close{
     display: none;
     cursor: pointer;
 }
+
+#searchbar{
+    margin-left: 15%;
+    padding:15px;
+    border-radius: 10px;
+  }
+
+  input[type=text] {
+     width: 30%;
+     -webkit-transition: width 0.15s ease-in-out;
+     transition: width 0.15s ease-in-out;
+  }
+
+  input[type=text]:focus {
+    width: 70%;
+  }
 
 .background{
     background: rgba(0, 0, 0, 0.7)url('https://cdn.wallpapersafari.com/22/37/nru3wc.jpg');
@@ -189,7 +205,9 @@ nav .navlist .close{
     text-align: center;
     padding: 10px;
 } 
-
+#lists{
+    display: flex;
+}
 .btn-dark{
     text-align: center;
     padding-top: 40px;
@@ -256,6 +274,13 @@ margin: 10px;
     height: 5px;
     margin: 3px 3px;
 }
+
+@media screen and (min-width:1116px){
+    .closeme{
+        display: none;
+    }
+}
+    
 
 @media screen and (max-width:1115px)
 {
@@ -394,9 +419,7 @@ margin: 10px;
         padding-bottom: 30px;
     }
 
-    .navlist{
-        display: none;
-    }
+    
 
     .burger{
         display: block;
@@ -426,14 +449,36 @@ margin: 10px;
         transition: top 1s ease;
         display: none;
     }
+    .navlist.active {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: flex;
+    }
+    #lists{
+        display: flex;
+        flex-direction: column;
+    }
 
-    nav .navlist .closeme{
+    .gap{
+        margin:10px;
+    }
+    nav .navlist .closeme {
         display: block;
         position: absolute;
         top: 20px;
         right: 20px;
         padding: 30px;
     }
+    
 
     nav .navbar {
         display: block;
@@ -513,6 +558,28 @@ margin: 10px;
         background: #000;
         transition: top 1s ease;
         display: none;
+    }.navlist.active {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: flex;
+    }
+    #lists{
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+    }
+
+    .gap{
+        margin:10px;
     }
 
     nav .navlist .closeme{
@@ -529,7 +596,7 @@ margin: 10px;
     nav .navlist li a:hover {
         background: none;
         color: orangered;
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
 
@@ -540,7 +607,29 @@ margin: 10px;
 
 @media screen and (max-width: 375px)
 {
-   
+    .navlist.active {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: flex;
+    }
+    #lists{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gap{
+        margin:10px;
+    }
+    
     .form{
         display: flex;
         justify-content: center;
@@ -632,4 +721,35 @@ nav .navlist {
     .firstsection{
         height: 150vh;
     }
+}
+
+@media  screen and (max-width:956px)
+{
+    #searchbar{
+        margin-right: 50px;
+        padding:20px;
+        border-radius: 10px;
+      }
+
+}
+
+@media  screen and (max-width:876px)
+{
+    #searchbar{
+        margin-right: 30px;
+        padding:20px;
+        border-radius: 10px;
+      }
+ 
+}
+
+
+@media  screen and (max-width:689px)
+{
+    #searchbar{
+        margin-right: 60px;
+        padding:20px;
+        border-radius: 10px;
+      }
+
 }
