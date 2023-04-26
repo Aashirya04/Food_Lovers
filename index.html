@@ -9,18 +9,22 @@
 </head>
 <body>
     <nav class="navbar">
-    <ul class="navlist">
+    <ul class="navlist" id="navlist">
     <div class="logo"><img src="CHEF.jpg" alt="chef">Foodie</div>
-    <li><a href="#homepage">Home</a></li>
-    <li><a href="#aboutpage">About</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#Order">Order</a></li>
-    <div class="closeme"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+    <div id="lists">
+    <li class="gap"><a href="#homepage">Home</a></li>
+    <li class="gap"><a href="#aboutpage">About</a></li>
+    <li class="gap" ><a href="#menu">Menu</a></li>
+    <li class="gap"><a href="#Order">Order</a></li>
+    </div>
+    <input id="searchbar" onkeyup="search()" type="text"
+    name="search" placeholder="Search food">
+    <div class="closeme"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
       <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
     </svg></div>
     </ul>
 
-    <div class="burger">
+    <div class="burger" id="hamburger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -59,7 +63,7 @@
     <h3 class="subheading">Our menu</h3>
     <h1 class="heading">Specials Today</h1>
 
-    <div class="box-container">
+    <div class="box-container" id="box-container">
         <div class="box">
                 <image src="waffle.avif" alt="tasty">
                 <h3>Chocolate Waffle</h3>
@@ -326,6 +330,6 @@
     </div>
 
 </footer>
- <script src="./main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
